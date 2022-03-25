@@ -6,7 +6,7 @@ import './App.css';
 import { useState } from 'react';
 
 function App() {
-  const [showAddTask, setShowAddTask] = useState(true)
+  // const [showAddTask, setShowAddTask] = useState(true)
   const [tasks, setTasks] = useState(
     [
       {
@@ -52,7 +52,7 @@ const toggleReminder=(id)=>{
     <>
       <div className='container'>
         <Header title="Task Tracker" />
-        {showAddTask&&<AddTask onAdd={addTask}/>}
+        <AddTask onAdd={addTask}/>
         {tasks.length!==0?<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />:<h3>there is no tasks to show</h3>}
       </div>
     </>
@@ -60,3 +60,7 @@ const toggleReminder=(id)=>{
 }
 
 export default App;
+
+
+
+// showAddTask&&
